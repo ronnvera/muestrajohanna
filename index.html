@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psicóloga Johanna</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-text fade-in">
+      <h1>Psicóloga Johanna</h1>
+      <h2>Atención profesional y personalizada</h2>
+      <p>Mejora tu bienestar con acompañamiento seguro y adaptado a tus necesidades.</p>
+
+      <div class="buttons">
+        <a href="https://wa.me/5070000000" class="btn">Agendar por WhatsApp</a>
+        <a href="#servicios" class="btn-outline">Ver servicios</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="services" id="servicios">
+  <div class="container">
+
+    <h2 class="section-title">Servicios</h2>
+    <p class="section-subtitle">Atención enfocada en tu bienestar y resultados reales</p>
+
+    <div class="services-grid">
+
+      <div class="service-card" data-service="consulta">
+        <i class="fa-solid fa-user-doctor service-icon"></i>
+        <h3>Consulta</h3>
+        <p>Evaluación completa y diagnóstico.</p>
+      </div>
+
+      <div class="service-card" data-service="plan">
+        <i class="fa-solid fa-apple-whole service-icon"></i>
+        <h3>Plan personalizado</h3>
+        <p>Adaptado a tus objetivos.</p>
+      </div>
+
+      <div class="service-card" data-service="seguimiento">
+        <i class="fa-solid fa-heart-pulse service-icon"></i>
+        <h3>Seguimiento</h3>
+        <p>Acompañamiento continuo.</p>
+      </div>
+
+      <div class="service-card" data-service="tratamiento">
+        <i class="fa-solid fa-stethoscope service-icon"></i>
+        <h3>Tratamiento</h3>
+        <p>Opciones personalizadas.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FORMULARIO -->
+<section class="form-section">
+  <div class="container">
+    <h2>Reserva tu sesión</h2>
+
+    <form action="https://formspree.io/f/xwvakjal" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="text" name="apellido" placeholder="Apellido" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="tel" name="telefono" placeholder="Teléfono" required>
+      <button type="submit">Enviar datos</button>
+    </form>
+
+    <div class="paypal">
+      <h3>Pagar sesión</h3>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="ronnvera78@gmail.com">
+        <input type="hidden" name="item_name" value="Sesión psicológica">
+        <input type="hidden" name="amount" value="30.00">
+        <input type="hidden" name="currency_code" value="USD">
+
+        <button type="submit" class="paypal-btn">Pagar con PayPal</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Agenda tu consulta hoy</h2>
+    <p>Da el primer paso hacia tu bienestar.</p>
+    <a href="https://wa.me/5070000000" class="btn-agenda">Agendar ahora</a>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact">
+  <div class="container">
+    <h2 class="section-title">Contacto</h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <p><i class="fa-solid fa-location-dot"></i> Panamá</p>
+        <p><i class="fa-solid fa-clock"></i> Lunes a Viernes</p>
+        <p><i class="fa-brands fa-whatsapp"></i> +507</p>
+      </div>
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=..." loading="lazy"></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Psicóloga Johanna</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h2 id="modal-title"></h2>
+    <p id="modal-text"></p>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

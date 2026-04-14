@@ -1,0 +1,304 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+  --primary: #2F6F8F;
+  --secondary: #5FA8B8;
+  --light-bg: #D9EEF2;
+  --dark: #2B2B2B;
+  --white: #FFFFFF;
+  --cta: #1E4F66;
+}
+
+/* BASE */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  padding: 100px 0;
+  background: url('johanna.jpg') center/cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  margin-bottom: 25px;
+  max-width: 500px;
+}
+
+/* BOTONES */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn,
+.btn-outline,
+.btn-agenda {
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  box-shadow: 0 4px 15px rgba(30,79,102,0.3);
+}
+
+.btn:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-agenda {
+  border: 2px solid var(--light-bg);
+  color: var(--white);
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.btn-agenda:hover {
+  background: var(--white);
+  color: var(--primary);
+}
+
+/* SERVICIOS */
+.services {
+  padding: 60px 0;
+  background: var(--light-bg);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.section-subtitle {
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* TARJETAS */
+.service-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+/* CTA */
+.cta {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* CONTACTO */
+.contact-card {
+  background: var(--light-bg);
+  padding: 25px;
+  border-radius: 14px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-item i {
+  color: var(--primary);
+}
+
+.map iframe {
+  width: 100%;
+  min-height: 300px;
+  border-radius: 14px;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  transform: translateY(30px);
+  transition: 0.3s;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+}
+
+/* FORMULARIO */
+.form-section {
+  background: white;
+  margin-top: -30px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 14px;
+  background: #25D366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1ebe5d;
+}
+
+.paypal-btn {
+  background: #0070ba;
+}
+
+.paypal-btn:hover {
+  background: #005c99;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.whatsapp-float img {
+  width: 65px;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--primary);
+  color: var(--white);
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* ANIMACIÓN */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+}
